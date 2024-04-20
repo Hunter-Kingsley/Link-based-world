@@ -1,58 +1,85 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Ratatouill Simulator: A Short Story",
+    "Credits": "Created by Hunter Kingsley (hckingsl@ucsc.edu).",
+    "InitialLocation": "Main_Kitchen",
+    "Pot_Collected": false,
+    "Soup_Cooked": false,
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Main_Kitchen": {
+            "Body": "We find ourselves in the middle of the kitchen. We have the ingredients, but we're forgetting something else we need to actually make the soup!",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
-        },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "The Window",
+                    "Target": "The_Window"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Stove",
+                    "Target": "Stove"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "The Pantry",
+                    "Target": "The_Pantry"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Cabinets",
+                    "Target": "Cabinets"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "The_Window": {
+            "Body": "The new waiter stands patiently on the other side of the window.",
+            "Dialouge": ["Hello sir! This is my first day, so I'm really excited to get going!", "Not to be rude, sir, but will the soup be ready soon?", "It's my first day as a waiter, hopefully I'll be as good as you are at it.", "Hey boss hows- ...is that...a rat? ...nevermind."],
+            "Choices": [
+                {
+                    "Text": "Talk to him",
+                    "Target": "The_Window",
+                    "Sub": "Yes"
+                },
+                {
+                    "Text": "Deliver the Soup",
+                    "Target": "End"
+                },
+                {
+                    "Text": "Back to Main Kitchen",
+                    "Target": "Main_Kitchen"
+                }
+            ]
+        },
+        "Stove": {
+            "Body": "Using the pot, we cook up a delicious soup that would please even the harshest critic. Time to send it off.",
+            "Choices": [
+                {
+                    "Text": "Back to Main Kitchen",
+                    "Target": "Main_Kitchen"
+                }
+            ]
+        },
+        "The_Pantry": {
+            "Body": "The shelves are lined with many kinds of tasty ingredients. We've already grabbed what we need from here for the soup.",
+            "Choices": [
+                {
+                    "Text": "Back to Main Kitchen",
+                    "Target": "Main_Kitchen"
+                }
+            ]
+        },
+        "Cabinets": {
+            "Body": "The Cabinets are filled with different cooking utensils, maybe even one that could help us.",
+            "Dialouge": ["Here we are! Now we can finnaly go and make the soup!"],
+            "Choices": [
+                {
+                    "Text": "Get out the Pot",
+                    "Target": "Cabinets",
+                    "Sub": "Yes"
+                },
+                {
+                    "Text": "Back to Main Kitchen",
+                    "Target": "Main_Kitchen"
+                }
+            ]
+        },
+        "End": {
+            "Body": "And with that, the first order at the new reasturant was a success!"
         }
     }
 }
